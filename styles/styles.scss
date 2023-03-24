@@ -18,12 +18,13 @@
     --color-grey-6: #12181b;
     --br-sm-2: 14px;
     --box-shadow-1: 0 3px 15px rgba(0,0,0,0.3);
+    transition: all .4s ease-in-out;
 
 }
 
 .light-mode {
-    --color-primary: #F8F7FF;
-    --color-secondary: #8670FF;
+    --color-primary: #EEF0F2;
+    --color-secondary: #AFCBFF;
     --color-white: #454e56;
     --color-black: #000;
     --color-grey0: #f8f8f8;
@@ -33,6 +34,7 @@
     --color-grey-4: #454e56;
     --color-grey-5: #f8f8f8;
     --color-grey-6: #12181b;
+    transition: all .4s ease-in-out;
 }
 main{
     margin: 0 8rem;
@@ -238,6 +240,7 @@ header{
     .left-about{
         padding-right: 5rem;
         padding-left: 5rem;
+        
         p{
             line-height: 2rem;
             padding: 1rem;
@@ -406,11 +409,12 @@ header{
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                padding-bottom: 2rem;
                 .icon {
                     background-color: var(--color-primary);
                     border-radius: 50%;
-                    width: 70%;
-                    height: 70%;
+                    width: 100%;
+                    height: 100%;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -424,7 +428,7 @@ header{
                     }
                     &:hover {
                         background-color: var(--color-white);
-                        i { color: var(--color-primary); }
+                        i { background-color: var(--color-primary); }
                     }
                 }
             }
@@ -527,10 +531,7 @@ header{
                 margin-left: 1.5rem;
             }
         }
-        .submit-btn {
-            display: flex;
-            justify-content: flex-start;
-        }
+        
     }
 }
 //Independent Components
@@ -611,6 +612,27 @@ header{
 
 html{
     scroll-behavior: smooth;
+}
+
+button{
+    font-family: 'Caudex', sans-serif;
+    position: relative;
+    top: 20%;
+    left: 76%;
+    width: 10rem;
+    height: 2.1rem;
+    line-height: 1;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 3px solid var(--color-secondary);
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    border-radius: 1rem;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .35s;
+    transform: translateY(-20%)
 }
 
 @import './media';
