@@ -81,6 +81,7 @@ header{
     align-items: center;
     justify-content: center;
     transform: translateY(-50%);
+
     .control{
         padding: 1rem;
         cursor: pointer;
@@ -98,6 +99,13 @@ header{
             color: var(--color-grey-2);
             pointer-events: none;
         }
+        &:active{ transform: translateY(-3px); }
+        i{
+            font-size: 1.4rem;
+            color: var(--color-grey-2);
+            pointer-events: none;
+        }
+    
     }
     .active-btn {
         background-color: var(--color-secondary);
@@ -106,27 +114,7 @@ header{
     }
 }
 
-.theme-btn {
-    bottom: 5%;
-    right: 3%;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    background-color: var(--color-grey-4);
-    cursor: pointer;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 3px 15px rgba(0,0,0,.3);
-    transition: all .1s ease-in-out;
-    &:active{ transform: translateY(-3px); }
-    i{
-        font-size: 1.4rem;
-        color: var(--color-grey-2);
-        pointer-events: none;
-    }
-}
+
 //Header 
 
 .header-content{
@@ -260,6 +248,32 @@ header{
         }
     }
 }
+//Skills
+.skills {
+    max-width: 70.75rem;
+    margin: auto;
+    text-align: center;
+    margin-top: 2.5rem;
+    padding-bottom: 8rem;
+    .skills-wrapper img {
+        padding: 1.25rem;
+    }
+    .icon {
+        width: 11.875rem;
+        height: 11.25rem;
+    }
+    .icon-card {
+        transition: all .4s ease-in-out;
+        &:hover{
+            transform-origin: bottom;
+            animation: .4s ease-in-out forwards;
+            cursor: default;
+            transform: translateY(-5px);
+            box-shadow: 1px 4px 15px rgba(0,0,0,.32);
+        }
+    }
+}
+
 
 .about-stats{
     padding-bottom: 4rem;
@@ -322,7 +336,7 @@ header{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
-    padding-bottom: 3rem;
+    padding-bottom: 8rem;
     .timeline-item{
         position: relative;
         padding-left: 3rem;
@@ -382,6 +396,7 @@ header{
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
     margin-top: 3rem;
+    padding-bottom: 8rem;
     .portfolio-item {
         position: relative;
         border-radius: 15px;
