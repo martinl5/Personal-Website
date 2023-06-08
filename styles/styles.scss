@@ -171,6 +171,20 @@ header{
             margin: 1.5rem;
             line-height: 2rem;
         }
+        
+        .btn-con{
+            .btn{
+                font-size: 0.9rem !important;
+                border-radius: 0.5rem;
+                text-align:center;
+                font-family: 'Caudex', sans-serif;
+                background-color: var(--color-secondary);
+                border: none;
+                color: var(--color-white);
+                padding: 0.5rem 0.9rem;
+            }
+        }
+        
     }
 }
 
@@ -180,6 +194,7 @@ header{
     grid-template-columns: repeat(2, 1fr);
     padding-top: 3.5rem;
     padding-bottom: 5rem;
+    
     img{
         width: 100%;
         height: 100%;
@@ -191,7 +206,6 @@ header{
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 2rem;
         padding-right: 8rem;
-        
         .about-item {
             border: 1px solid var(--color-grey-5);
             border-radius: 5px;
@@ -233,16 +247,17 @@ header{
         }
     }
     .left-about{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         padding-right: 5rem;
-        padding-left: 5rem;
         span{
             font-size: 1.2rem;
-            text-align: center;
             font-weight: 900;
         }
         p{
+            margin: 1.5rem;
             line-height: 2rem;
-            padding: 1rem;
             color: var(--color-white);
             font-weight: 400;
         }
@@ -270,59 +285,6 @@ header{
             cursor: default;
             transform: translateY(-5px);
             box-shadow: 1px 4px 15px rgba(0,0,0,.32);
-        }
-    }
-}
-
-
-.about-stats{
-    padding-bottom: 4rem;
-    .about-title{
-        text-align: center;
-        color: var(--color-secondary)
-    }
-    .progress-bars{
-        padding-left: 4rem;
-        padding-right: 4rem;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 2rem;
-        .progress-bar{
-            display: flex;
-            flex-direction: column;
-        }
-        .progress-con{
-            display: flex;
-            align-items:center;
-            .progress{
-                width: 100%;
-                height: .45rem;
-                background-color: var(--color-grey-3);
-                margin-left: 1rem;
-                position: relative;
-                span{
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    height: 100%;
-                    background-color: var(--color-secondary);
-                }
-                .hml{
-                    width: 90%;
-                }
-                .css{
-                    width: 80%;
-                }
-                .js{
-                    width: 50%;
-                }
-                .ocaml{
-                    width: 75%;
-                }
-                .python{
-                    width: 85%;
-                }
-            }
         }
     }
 }
@@ -538,7 +500,7 @@ header{
         .input-control {
             margin: 1.5rem 0;
             input, textarea {
-                border-radius: 30px;
+                border-radius: 2rem;
                 font-weight: inherit;
                 font-size: inherit;
                 font-family: inherit;
@@ -557,14 +519,22 @@ header{
                 margin-left: 1.5rem;
             }
         }
+
+            .btn{
+                font-size: 0.9rem !important;
+                border-radius: 0.5rem;
+                text-align:center;
+                font-family: 'Caudex', sans-serif;
+                background-color: var(--color-secondary);
+                border: none;
+                color: var(--color-white);
+                padding: 0.5rem 0.9rem;
+            }
         
     }
 }
 //Independent Components
-.btn-con{
-    display: flex;
-    align-self: flex-start;
-}
+
 
 .main-btn{
     border-radius: 30px;
@@ -635,7 +605,6 @@ header{
         .bg-text{
             position: absolute;
             top: 50%;
-            left: 50%;
             color: var(--color-grey-5);
             transition: all .4s ease-in-out;
             z-index: -1;
@@ -650,26 +619,8 @@ html{
     scroll-behavior: smooth;
 }
 
-button{
-    font-family: 'Caudex', sans-serif;
-    position: relative;
-    top: 20%;
-    left: 76%;
-    width: 10rem;
-    height: 2.1rem;
-    line-height: 1;
-    font-size: 1.2rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-    border: 3px solid var(--color-secondary);
-    background-color: var(--color-secondary);
-    color: var(--color-white);
-    border-radius: 1rem;
-    cursor: pointer;
-    overflow: hidden;
-    transition: all .35s;
-    transform: translateY(-20%)
-}
+
+
 
 @import './media';
 
