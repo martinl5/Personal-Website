@@ -1,10 +1,4 @@
 # Personal Website
- 
- 
- 
-
- # README
-
 ## Project Title
 **My Personal Website**
 
